@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Game Idea Generator</title>
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  p.subtitle {
+    color: #aaa;
+    margin-bottom: 30px;
+    max-width: 500px;
+  }
+  .card {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+  }
+  button {
+    background-color: #22c55e;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  button:hover {
+    background-color: #16a34a;
+  }
+  #result {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #22c55e;
+    font-weight: bold;
+    min-height: 30px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🎮 Roblox Game Idea Generator</h1>
+<p class="subtitle">Stuck on what game to build next? Generate a random Roblox game concept instantly.</p>
+
+<div class="card">
+  <button onclick="generateIdea()">Generate Idea</button>
+  <div id="result"></div>
+</div>
+
+<script>
+function generateIdea() {
+  var genres = ["Obby", "Tycoon", "Simulator", "Horror", "Roleplay", "Battle Royale", "Racing", "Puzzle"];
+  var twists = [
+    "but everything is upside down",
+    "set inside a giant fridge",
+    "where you play as a shrinking character",
+    "with a time-loop every 60 seconds",
+    "where gravity randomly flips",
+    "but you're being chased by your own shadow",
+    "set entirely underwater",
+    "where the map rebuilds itself every round"
+  ];
+
+  var genre = genres[Math.floor(Math.random() * genres.length)];
+  var twist = twists[Math.floor(Math.random() * twists.length)];
+
+  document.getElementById('result').innerText = genre + " game " + twist;
+}
+</script>
+
+</body>
+</html>
